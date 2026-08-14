@@ -37,8 +37,7 @@ const SERVICES = [
   },
 ];
 
-// These control the "stagger" animation: the parent fades its children in
-// one after another, instead of all four cards appearing at once.
+
 const listAnimation = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
