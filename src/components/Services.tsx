@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PenTool, Shirt, Megaphone, TrendingUp, Phone } from "lucide-react";
+import { PenTool, Shirt, Megaphone, TrendingUp, Phone, Tent, Gift } from "lucide-react";
 
 // The four services we offer. Each one just needs an icon, a title, and a
 
@@ -42,6 +42,28 @@ const SERVICES = [
     imageSrc: "/Content.jpeg",
     imageAlt: "Content creation visuals",
   }
+  ,
+  {
+    icon:Tent,
+    title: "Event Planning & Management",
+    description: "Seamless event planning and management that leaves a lasting impression.",
+    imageSrc: "/Event.jpeg",
+    imageAlt: "Event planning and management visuals",
+  },
+  {
+    icon: Gift,
+    title : "Corporate Gifts",
+    description: "Thoughtful corporate gifts that strengthen relationships and show appreciation.",
+    imageSrc: "/Corporate.jpeg",
+    imageAlt: "Corporate gifts and branding",
+  },
+  {
+    icon: Megaphone,    
+    title: "Posters, Flyers, and Signage",
+    description: "Eye-catching posters, flyers, and signage that effectively communicate your message.",
+    imageSrc: "/Posters.jpeg",
+    imageAlt: "Posters, flyers, and signage visuals",
+  },
 ];
 
 
