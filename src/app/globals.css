@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/*
+  Brand colors, defined once here and reused everywhere as Tailwind classes
+  (e.g. bg-purple, text-gold). If the brand colors ever change, this is the
+  only file that needs updating.
+
+  How the palette is meant to be used:
+  - white         -> primary background color for most sections (just use Tailwind's built-in "white")
+  - purple        -> secondary color, used for darker "feature" sections (hero, footer, etc.)
+  - gold          -> accent color, used sparingly for buttons, icons, and highlights
+  - charcoal/stone -> text colors on white backgrounds
+*/
+:root {
+  --color-purple: #2b1b3d;
+  --color-gold: #c8a25d;
+  --color-gold-light: #e4cd94; /* slightly lighter gold, used for hover states */
+  --color-charcoal: #1a1a1a;   /* main body text on white */
+  --color-stone: #6b6b6b;      /* secondary/muted text on white */
+}
+
+@theme inline {
+  --color-purple: var(--color-purple);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-charcoal: var(--color-charcoal);
+  --color-stone: var(--color-stone);
+
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-montserrat);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-charcoal);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Thin gold line used as a small decorative divider under headings */
+.hairline {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+}
+
+.button-pop {
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.button-pop:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 24px 55px rgba(43, 27, 61, 0.12);
+}
+
+.button-pop:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* Respect users who have asked their OS to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

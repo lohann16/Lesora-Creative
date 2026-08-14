@@ -1,0 +1,85 @@
+Lesora Creative - Site Description
+================================
+
+Overview
+--------
+Lesora Creative is a premium branding and marketing studio website designed to feel elegant, modern, and memorable. The site presents the brand as a high-end creative agency focused on helping ambitious businesses build powerful identities, standout campaigns, and lasting impact.
+
+The experience combines refined typography, a minimal but sophisticated visual language, and a polished layout that reflects the studio’s premium positioning. The site is built to communicate trust, creativity, and strategic thinking while keeping the experience clean and immersive.
+
+Core Goals
+----------
+- Present Lesora Creative as a premium, distinctive agency
+- Showcase the brand’s personality and creative direction
+- Highlight services and case-study-style storytelling
+- Encourage inquiries through a clear contact experience
+- Create a memorable digital presence that feels elevated and unique
+
+Suggested Brand Positioning
+---------------------------
+Lesora Creative is a boutique creative studio that blends branding, storytelling, and marketing into thoughtful experiences that leave a lasting mark.
+
+Tech Stack
+----------
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Resend (for contact form email handling)
+
+Why This Stack
+--------------
+- Fast and modern for a polished marketing website
+- Excellent performance and SEO support
+- Flexible for future enhancements like CMS integration, animations, and custom sections
+- Clean developer experience for ongoing updates
+
+What I Built
+------------
+This project is a polished, modern website for Lesora Creative that reflects a premium creative studio identity. The site includes a refined homepage experience, a dedicated about page, case-study-style content sections, and a contact experience designed to feel elevated and professional.
+
+The design focuses on clean layout, elegant typography, thoughtful spacing, and a strong visual hierarchy. The implementation also includes a custom logo treatment, shared reusable UI components, and a consistent visual system throughout the site.
+
+Project Structure
+-----------------
+- Home page: introduces the studio and its positioning
+- About page: presents the brand story and values
+- Case studies page: showcases portfolio-style content
+- Contact experience: allows users to reach out easily
+- Shared layout: includes a consistent header, footer, and reusable sections
+
+Key Features
+------------
+- Responsive design for desktop and mobile
+- Premium visual styling with custom typography and spacing
+- Reusable component-based structure
+- Smooth motion and transitions for a polished feel
+- Contact form integration for lead capture
+- SEO-friendly structure and modern Next.js architecture
+
+Tech Stack
+----------
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Resend (for contact form email handling)
+
+Why This Stack Was Chosen
+-------------------------
+- Fast performance and strong SEO capabilities
+- Modern component-based development workflow
+- Easy scalability for future features and content updates
+- Clean and maintainable code structure for ongoing development
+
+Development Notes
+-----------------
+The site was built as a modern marketing website with a strong emphasis on visual identity and user experience. The project uses a component-driven approach so the layout can be extended easily in the future, whether for more pages, richer animations, or CMS-powered content.
+
+Documentation Summary
+---------------------
+This website is a premium creative studio landing experience designed to feel memorable, refined, and conversion-focused. It combines elegant design, modern web technology, and a strong brand presence to create a professional online identity for Lesora Creative.
