@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-// The links shown in the main navigation bar.
-// Links starting with "/#" jump to a section on the homepage.
 const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Case Studies", href: "/case-studies" },
@@ -17,14 +15,12 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  // The nav is always white now, so all we need scroll position for is
-  // adding a subtle shadow once the page has scrolled a little.
   useEffect(() => {
     function handleScroll() {
       setHasScrolled(window.scrollY > 24);
     }
 
-    handleScroll(); // run once on mount in case the page loads already scrolled
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -39,7 +35,6 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/LesoraLogo1.png"
@@ -54,7 +49,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop nav links (hidden on mobile) */}
         <ul className="hidden md:flex items-center gap-9 font-sans text-[11px] tracking-[0.2em] uppercase text-charcoal/70">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
@@ -68,7 +62,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Call-to-action button */}
         <Link
           href="/#contact"
           className="hidden md:inline-flex items-center gap-2 bg-purple text-white text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 hover:bg-purple/90 transition-colors button-pop"

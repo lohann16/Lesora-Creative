@@ -4,8 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PenTool, Shirt, Megaphone, TrendingUp, Phone, Tent, Gift } from "lucide-react";
 
-// The four services we offer. Each one just needs an icon, a title, and a
-
 const SERVICES = [
   {
     icon: PenTool,

@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// Basic shape validation. Keep this file free of any framework "magic" so
-// it's easy to swap Resend for another provider later if needed.
 type ContactPayload = {
   name: string;
   email: string;
   company?: string;
   message: string;
-  // honeypot — real users never fill this in; bots often do
   website?: string;
 };
 
@@ -24,7 +21,6 @@ export async function POST(req: NextRequest) {
 
   const { name, email, company, message, website } = body;
 
-  // Honeypot: silently "succeed" so bots don't learn anything, but do nothing.
   if (website) {
     return NextResponse.json({ ok: true });
   }
@@ -62,7 +58,6 @@ export async function POST(req: NextRequest) {
 
   try {
     const { error } = await resend.emails.send({
-      // Must be a verified sender/domain in your Resend account.
       from: "Lesora Creative Website <onboarding@resend.dev>",
       to: toEmail,
       replyTo: email,

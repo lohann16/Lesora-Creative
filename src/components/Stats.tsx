@@ -13,7 +13,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     if (!isInView) return;
 
     const durationMs = 1500;
-    const steps = 40; // how many times we update the number during the animation
+    const steps = 40;
     const stepTime = durationMs / steps;
     let currentStep = 0;
 
@@ -38,8 +38,6 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   );
 }
 
-// The three business goals shown in this section, taken from the brand's
-// goals list. Add or remove goals here without touching the layout below.
 const GOALS = [
   { value: 1000, suffix: "+", label: "Businesses empowered with strong brands" },
   { value: 2, suffix: " continents", label: "Local and global reach expanding" },

@@ -5,12 +5,9 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, AtSign } from "lucide-react";
 import Monogram from "./Monogram";
 
-// Tracks what's currently happening with the form submission, so we know
-// what to show the user (the form itself, a spinner, a success message,
-// or an error message).
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-// Shared styling for every text input/textarea in the form.
+
 const inputStyles =
   "w-full bg-transparent border-b border-charcoal/20 focus:border-gold outline-none py-3 font-sans text-[15px] text-charcoal placeholder:text-stone/60 transition-colors";
 
@@ -50,7 +47,6 @@ export default function Contact() {
   return (
     <section id="contact" className="relative bg-white py-28 lg:py-36 overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-5 gap-16">
-        {/* Left column: contact details */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -95,7 +91,6 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        {/* Right column: the form itself */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,11 +115,6 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
-              {/*
-                Honeypot field: invisible to real visitors, but a bot filling
-                out every field on the page will fill this in too. If it has
-                a value, the API route quietly ignores the submission.
-              */}
               <input
                 type="text"
                 name="website"

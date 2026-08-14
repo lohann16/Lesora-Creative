@@ -35,7 +35,6 @@ export default async function CaseStudyPage({
 
   return (
     <main className="pt-20">
-      {/* hero */}
       <section className="relative bg-white py-24 lg:py-32 overflow-hidden">
         <Monogram
           size={1080}
@@ -63,7 +62,6 @@ export default async function CaseStudyPage({
         </div>
       </section>
 
-      {/* results band */}
       <section className="bg-gold py-10">
         <div className="mx-auto max-w-4xl px-6 grid grid-cols-3 gap-6">
           {cs.results.map((r) => (
@@ -77,7 +75,6 @@ export default async function CaseStudyPage({
         </div>
       </section>
 
-      {/* body */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-4xl px-6 grid md:grid-cols-2 gap-16">
           <div>

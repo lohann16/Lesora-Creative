@@ -8,7 +8,6 @@ const CATEGORIES: (CaseStudy["category"] | "All")[] = [
   "Branding & Identity",
   "Embroidery & Merchandise",
   "Marketing Solutions",
-  // "Paid Media Management",
 ];
 
 export default function CaseStudiesGrid({ items }: { items: CaseStudy[] }) {

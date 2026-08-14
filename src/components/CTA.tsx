@@ -2,10 +2,6 @@
 
 import { motion } from "framer-motion";
 import Monogram from "./Monogram";
-
-// A reusable "call to action" banner. It's used at the bottom of several
-// pages, so the button link and optional eyebrow text are passed in as
-// props rather than hard-coded.
 export default function CTA({
   href = "#contact",
   eyebrow,

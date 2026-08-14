@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 
-// The words that scroll across the gold banner.
 const WORDS = ["Creative", "Authentic", "Strategic", "Bold", "Impactful", "Premium", "Growth"];
 
 export default function Marquee() {
@@ -16,7 +15,6 @@ export default function Marquee() {
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 22, ease: "linear", repeat: Infinity }}
       >
-        {/* Two identical copies of the word list, so the animation loops seamlessly */}
         {[0, 1].map((copyNumber) => (
           <div key={copyNumber} className="flex">
             {words.map((word, index) => (

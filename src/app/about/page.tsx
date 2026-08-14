@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="pt-20">
-      {/* hero */}
       <section className="relative bg-white py-24 lg:py-32 overflow-hidden">
         <Skyline className="absolute bottom-0 left-0 w-full h-40 text-purple/[0.05]" />
         <Reveal className="relative mx-auto max-w-7xl px-6 lg:px-10">

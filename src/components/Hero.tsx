@@ -31,7 +31,6 @@ const revealItem = {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Existing ambient motion graphic */}
       <motion.div
         className="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-gold/10 blur-3xl"
         initial={{ opacity: 0, scale: 0.75 }}
@@ -44,8 +43,6 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-7xl w-full px-6 lg:px-10 pt-28 pb-20">
         <div className="grid gap-12 items-start lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-
-          {/* LEFT SIDE — KEEPING YOUR ORIGINAL CONTENT */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -102,7 +99,6 @@ export default function Hero() {
             </motion.p>
           </motion.div>
 
-          {/* RIGHT SIDE — IMAGE NOW FILLS HALF THE HERO */}
           <motion.div
             variants={revealItem}
             whileHover={{ y: -8, scale: 1.005 }}
