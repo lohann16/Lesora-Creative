@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PenTool, Shirt, Megaphone, TrendingUp } from "lucide-react";
+import { PenTool, Shirt, Megaphone, TrendingUp, Phone } from "lucide-react";
 
 // The four services we offer. Each one just needs an icon, a title, and a
 
@@ -35,6 +35,13 @@ const SERVICES = [
     imageSrc: "/Ads.jpeg",
     imageAlt: "Paid media campaign performance",
   },
+  {
+    icon: Phone,
+    title: "Content Creation",
+    description: "Engaging content that tells your story and connects with your audience.",
+    imageSrc: "/Content.jpeg",
+    imageAlt: "Content creation visuals",
+  }
 ];
 
 
