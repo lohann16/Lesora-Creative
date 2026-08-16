@@ -73,7 +73,7 @@ export default function Contact() {
               className="flex items-center gap-3 text-charcoal/80 hover:text-purple transition-colors"
             >
               <Mail size={18} strokeWidth={1.5} className="text-gold" />
-              hello@lesoracreative.com
+               lesoracreative@gmail.com
             </a>
             <div className="flex items-center gap-3 text-charcoal/80">
               <MapPin size={18} strokeWidth={1.5} className="text-gold" />
