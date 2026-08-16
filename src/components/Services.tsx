@@ -37,7 +37,7 @@ const SERVICES = [
     icon: Phone,
     title: "Content Creation",
     description: "Engaging content that tells your story and connects with your audience.",
-    imageSrc: "/Content.jpeg",
+    imageSrc: "/Content.png",
     imageAlt: "Content creation visuals",
   }
   ,
@@ -45,21 +45,21 @@ const SERVICES = [
     icon:Tent,
     title: "Event Planning & Management",
     description: "Seamless event planning and management that leaves a lasting impression.",
-    imageSrc: "/Event.jpeg",
+    imageSrc: "/Event.png",
     imageAlt: "Event planning and management visuals",
   },
   {
     icon: Gift,
     title : "Corporate Gifts",
     description: "Thoughtful corporate gifts that strengthen relationships and show appreciation.",
-    imageSrc: "/Corporate.jpeg",
+    imageSrc: "/Gift.png",
     imageAlt: "Corporate gifts and branding",
   },
   {
     icon: Megaphone,    
     title: "Posters, Flyers, and Signage",
     description: "Eye-catching posters, flyers, and signage that effectively communicate your message.",
-    imageSrc: "/Posters.jpeg",
+    imageSrc: "/Posters.png",
     imageAlt: "Posters, flyers, and signage visuals",
   },
 ];
