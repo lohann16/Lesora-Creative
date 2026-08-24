@@ -44,9 +44,9 @@ export default function Navbar() {
             className="h-8 w-8 rounded-full object-cover"
             priority
           />
-          <span className="font-display text-lg tracking-wide text-charcoal">
-            Lesora <span className="text-gold">Creative</span>
-          </span>
+          <span className="font-[Montserrat] font-large text-lg tracking-wide text-charcoal">
+    LESORA <span className="text-gold">CREATIVE</span>
+</span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-9 font-sans text-[11px] tracking-[0.2em] uppercase text-charcoal/70">
