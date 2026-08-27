@@ -16,7 +16,7 @@ export default function Legacy() {
         transition={{ duration: 1.2, ease: "easeOut" }}
       />
 
-      <div className="relative mx-auto max-w-4xl px-6 text-center">
+      <div className="relative mx-auto max-w-4xl px-6 text-center -translate-y-[22%]">
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
