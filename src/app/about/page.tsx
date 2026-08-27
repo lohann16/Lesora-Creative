@@ -30,10 +30,7 @@ export default function AboutPage() {
             is a <span className="italic text-gold">method.</span>
           </h1>
           <p className="mt-6 max-w-lg font-sans text-stone text-[15px] leading-relaxed">
-            We started Lesora Creative because too many good businesses were
-            being held back by forgettable branding. We build the identity,
-            strategy, and marketing systems that let them compete on more
-            than price.
+           We lead with performance because brands need more than visibility — they need movement. Our marketing work is built around clear objectives, audience understanding, strong creative, measurable KPIs, and continuous optimisation. 01 DISCOVER — Understand the business, audience, market and objectives. 02 STRATEGISE — Build the marketing and creative direction around the goal. 03 CREATE — Develop content and assets designed to capture attention.04 EXECUTE — Launch across the right platforms and touchpoints. 05 MEASURE — Track agreed KPIs and turn performance into insight. 06 OPTIMISE — Use data to improve the next decision. Because a strong brand should do more than look good. It should communicate value, build credibility, create connection and give businesses the confidence to compete on more than price.
           </p>
         </Reveal>
       </section>
