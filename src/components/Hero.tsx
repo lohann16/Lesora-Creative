@@ -31,6 +31,12 @@ const revealItem = {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-100"
+        style={{ backgroundImage: "url('/Hero.png')" }}
+        aria-hidden="true"
+      />
+
       <motion.div
         className="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-gold/10 blur-3xl"
         initial={{ opacity: 0, scale: 0.75 }}
@@ -91,44 +97,12 @@ export default function Hero() {
 
             <motion.p
               variants={revealItem}
-              className="mt-8 max-w-md font-sans text-stone text-[15px] leading-relaxed"
+              className="mt-8 max-w-md font-sans text-white text-[15px] leading-relaxed"
             >
               Lesora Creative builds premium brand identities and marketing
               systems for businesses ready to be unmistakable. Our vision. Our
               purpose. Your impact.
             </motion.p>
-          </motion.div>
-
-          <motion.div
-            variants={revealItem}
-            whileHover={{ y: -8, scale: 1.005 }}
-            transition={{
-              type: "spring",
-              stiffness: 230,
-              damping: 24,
-            }}
-            className="
-              relative
-              mx-auto
-              w-full
-              h-[520px]
-              lg:h-[620px]
-              overflow-hidden
-              rounded-[2rem]
-              bg-purple/5
-              shadow-xl
-              shadow-purple/10
-            "
-          >
-            <img
-              src="/Lesora%20Header.png"
-              alt="Lesora Creative"
-              className="
-                h-full
-                w-full
-                object-cover
-              "
-            />
           </motion.div>
         </div>
       </div>
