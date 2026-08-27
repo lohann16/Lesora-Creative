@@ -26,7 +26,7 @@
   --color-charcoal: var(--color-charcoal);
   --color-stone: var(--color-stone);
 
-  --font-display: var(--font-playfair);
+  --font-display: var(--font-montserrat);
   --font-sans: var(--font-montserrat);
 }
 
@@ -47,7 +47,7 @@ h4,
 h5,
 h6,
 .font-display {
-  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
 .font-sans {
