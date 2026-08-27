@@ -4,7 +4,7 @@ export default function Skyline({ className = "" }: { className?: string }) {
       src="/Skyline.png"
       alt=""
       aria-hidden="true"
-      className={`w-full h-auto translate-y-[20%] ${className}`}
+      className={`w-full h-auto translate-y-[20%] opacity-60 ${className}`}
     />
   );
 }
