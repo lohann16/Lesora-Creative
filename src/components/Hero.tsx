@@ -109,7 +109,7 @@ export default function Hero() {
                     paintOrder: "stroke fill",
                   }}
                 >
-                  Make Your
+                  WE BUILD BRANDS PEOPLE
                 </motion.span>
               </span>
 
@@ -134,7 +134,7 @@ export default function Hero() {
                     color: "#B99A5B",
                   }}
                 >
-                  Mark.
+                  Remember
                 </motion.span>
               </span>
 
