@@ -33,7 +33,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-100"
-        style={{ backgroundImage: "url('/Hero.png')" }}
+        style={{ backgroundImage: "url('/Hero.jpeg')" }}
         aria-hidden="true"
       />
 
