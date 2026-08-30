@@ -134,7 +134,7 @@ export default function Hero() {
                     color: "#B99A5B",
                   }}
                 >
-                  Remember
+                  REMEMBER
                 </motion.span>
               </span>
 
