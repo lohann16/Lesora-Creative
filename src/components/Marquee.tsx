@@ -9,7 +9,7 @@ export default function Marquee() {
   const words = [...WORDS, ...WORDS];
 
   return (
-   <div className="relative bg-[#F8F5EF] py-4 overflow-hidden select-none">
+  <div className="relative bg-[#F8F5EF] py-4 overflow-hidden select-none">
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}
