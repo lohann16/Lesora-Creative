@@ -36,7 +36,7 @@ export default function Hero() {
       <div
         className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-100"
         style={{
-          backgroundImage: "url('/Hero.jpeg')",
+          backgroundImage: "url('/hero1.jpeg')",
         }}
         aria-hidden="true"
       />
