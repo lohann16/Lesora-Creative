@@ -68,7 +68,6 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={revealContainer}
-            className="lg:col-span-2"
           >
 
             {/* Eyebrow */}
@@ -86,7 +85,7 @@ export default function Hero() {
             {/* Main Heading */}
             <motion.h1
               variants={revealItem}
-              className="mt-6 font-display font-bold leading-[0.95] text-[13vw] sm:text-7xl lg:text-8xl"
+              className="mt-6 font-display font-bold leading-[0.95] text-[11vw] sm:text-6xl lg:text-6xl"
             >
 
               {/* MAKE YOUR */}
@@ -106,9 +105,7 @@ export default function Hero() {
                   }}
                   className="block"
                   style={{
-                    color: "#211117",
-                    WebkitTextStroke: "1.5px #B99A5B",
-                    paintOrder: "stroke fill",
+                    color: "#EDE4D3",
                   }}
                 >
                   WE BUILD BRANDS PEOPLE
@@ -133,7 +130,7 @@ export default function Hero() {
                   }}
                   className="block italic"
                   style={{
-                    color: "#B99A5B",
+                    color: "#B8935A",
                   }}
                 >
                   REMEMBER
