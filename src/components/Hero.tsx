@@ -68,6 +68,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={revealContainer}
+            className="lg:col-span-2"
           >
 
             {/* Eyebrow */}
