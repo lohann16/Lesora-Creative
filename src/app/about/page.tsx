@@ -37,8 +37,7 @@ export default function AboutPage() {
 
           {/* Introduction */}
           <p className="mt-6 max-w-2xl font-sans text-[15px] leading-relaxed text-stone">
-            We lead with performance because brands need more than visibility —
-            they need movement. Our marketing work is built around clear
+            We lead with performance because what brand need more than visibility is movement .Our marketing work is built around clear
             objectives, audience understanding, strong creative, measurable
             KPIs, and continuous optimisation.
           </p>

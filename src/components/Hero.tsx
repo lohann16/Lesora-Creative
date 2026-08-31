@@ -74,11 +74,12 @@ export default function Hero() {
             {/* Eyebrow */}
             <motion.p
               variants={revealItem}
-              className="mt-8 font-sans text-[11px] uppercase tracking-[0.35em]"
+              className="mt-8 font-sans text-[11px] font-bold uppercase tracking-[0.35em]"
               style={{
-                color: "#B99A5B",
+                color: "#FFFFFF",
               }}
             >
+            
               Branding &middot; Marketing &middot; Impact
             </motion.p>
 
