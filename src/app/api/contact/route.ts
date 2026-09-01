@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
 
 type ContactPayload = {
   name: string;
@@ -40,43 +39,48 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Message is too long." }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.CONTACT_TO_EMAIL;
+  const serviceId = process.env.EMAILJS_SERVICE_ID;
+  const templateId = process.env.EMAILJS_TEMPLATE_ID;
+  const privateKey = process.env.EMAILJS_PRIVATE_KEY;
+  const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+  const toEmail = process.env.CONTACT_TO_EMAIL || "hello@lesoracreative.com";
 
-  if (!apiKey || !toEmail) {
-    console.error("Missing RESEND_API_KEY or CONTACT_TO_EMAIL environment variable.");
+  if (!serviceId || !templateId || !(privateKey || publicKey)) {
+    console.error("Missing EmailJS configuration.");
     return NextResponse.json(
       { error: "Email service is not configured yet. Please try again later." },
       { status: 500 }
     );
   }
 
-  const resend = new Resend(apiKey);
-
-  const escapeHtml = (s: string) =>
-    s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string));
-
   try {
-    const { error } = await resend.emails.send({
-      from: "Lesora Creative Website <onboarding@resend.dev>",
-      to: toEmail,
-      replyTo: email,
-      subject: `New enquiry from ${name}${company ? ` (${company})` : ""}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; font-size: 15px; color: #1A1A1A; line-height: 1.6;">
-          <h2 style="color:#2B1B3D; margin-bottom: 4px;">New website enquiry</h2>
-          <p style="margin:0 0 16px; color:#6B6B6B;">via lesoracreative.com contact form</p>
-          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-          ${company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : ""}
-          <p><strong>Message:</strong></p>
-          <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
-        </div>
-      `,
+    const payload: Record<string, unknown> = {
+      service_id: serviceId,
+      template_id: templateId,
+      template_params: {
+        from_name: name.trim(),
+        from_email: email.trim(),
+        company: company?.trim() || "Not provided",
+        message: message.trim(),
+        to_email: toEmail,
+      },
+    };
+
+    if (privateKey) {
+      payload.accessToken = privateKey;
+    } else {
+      payload.user_id = publicKey;
+    }
+
+    const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
 
-    if (error) {
-      console.error("Resend error:", error);
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("EmailJS error:", response.status, errorText);
       return NextResponse.json({ error: "Failed to send message." }, { status: 502 });
     }
 
